@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  mridata:
+    image: mridata
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    tty: true
+    volumes:
+      - .:/opt/project
+
+    ports:
+      - 8080:8080
